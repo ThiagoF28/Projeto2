@@ -5,7 +5,13 @@ function somar(){
     
     var unimed = calUnimed(idade, peso, altura);
     var hapvida = calHapvida(idade, peso, altura);
-    var resultado = tabelaResultados(unimed, hapvida);
+
+
+    var resultadoHTML = "<h2>Resultados:</h2>";
+    resultadoHTML += "<table><tr><th></th><th>Básico</th><th>Standard</th><th>Premium</th></tr>";
+    resultadoHTML += "<tr><td>unimed</td><td>" + precocalunimed.basico + "</td><td>" + precounimed.standard + "</td><td>" + precounimed.premium + "</td></tr>";
+    resultadoHTML += "<tr><td>hapvida</td><td>" + precohapvida.basico + "</td><td>" + precohapvida.standard + "</td><td>" + precoOhapvida.premium + "</td></tr>";
+    resultadoHTML += "</table>";
 
     document.getElementById('resultado').innerHTML = resultado;
 }
