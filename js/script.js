@@ -6,6 +6,7 @@ function somar(){
     var unimed = calUnimed(idade, peso, altura);
     var hapvida = calHapvida(idade, peso, altura);
     var resultado = tabelaResultados(unimed, hapvida);
+
     document.getElementById('resultado').innerHTML = resultado;
 }
 
@@ -21,7 +22,7 @@ function calUnimed(idade, peso, altura){
 function calHapvida(idade, peso, altura){
     var imc = peso / (altura * altura);
     var calculComorbidade = calculComorbidade(imc);
-    return{
+    return {
         basico: 100 + (calculComorbidade * 10 * (imc / 10)),
         standard: (150 + (calculComorbidade * 15)) * (imc / 10),
         premium: (200 - (imc * 10) + (calculComorbidade * 20)) * (imc / 10),
