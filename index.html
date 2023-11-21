@@ -10,19 +10,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container-fluid section-content-bg1" class="section col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3"></div>
-    <h1>Planos Ideais para você</h1>
-    <label for="form-label" for="idade">Idade:</label>
-    <input type="number" class="form-control" id="idade" placeholder="Digite sua Idade">
+    <div class="container-fluid text-center col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3 my-content">
+        <img src="img/top-planos.jpg" alt="" class="bg">
+        <h1>Planos Ideais para você</h1>
+        <div class="container">
+            <div class="form-plan">
+                <label for="form-label" for="idade">Idade:</label>
+                <input type="number" class="form-control" id="idade" placeholder="Digite sua Idade">
 
-    <label for="form-label" for="altura">Altura</label>
-    <input type="number" class="form-control" id="altura" placeholder="Digite sua Altura">
+                <label for="form-label" for="altura">Altura</label>
+                <input type="number" class="form-control" id="altura" placeholder="Digite sua Altura">
 
-    <label for="form-label" for="peso">Peso</label>
-    <input type="number" class="form-control" id="peso" placeholder="Digite seu Peso">
-    
-    <button class="btn btn-primary" onclick="calcularPlanos()">Calcular</button>
-    <h1 id="resultado"></h1>
-</div>
+                <label for="form-label" for="peso">Peso</label>
+                <input type="number" class="form-control" id="peso" placeholder="Digite seu Peso">
+                
+                <button class="btn btn-primary" onclick="calcularPlanos()">Calcular</button>
+            </div>
+            <div class="result-section">
+                <h2 class="valores">Valores</h2>
+                <div id="tabelaResultado"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
