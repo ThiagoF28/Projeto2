@@ -10,24 +10,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container-fluid text-center col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3 my-content">
+    <div id="all-content" class="container-fluid text-center col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3 my-content">
         <img src="img/top-planos.jpg" alt="" class="bg">
-        <h1>Planos Ideais para você</h1>
+        <span>Aqui você encontra o melhor preço e qualidade!</span>
+        <span>Preencha os dados para que possamos ver o melhor plano para você.</span>
         <div class="container">
             <div class="form-plan">
                 <label for="form-label" for="idade">Idade:</label>
-                <input type="number" class="form-control" id="idade" placeholder="Digite sua Idade">
+                <input type="number" class="form-control" id="idade" placeholder="Ex.: 28">
 
                 <label for="form-label" for="altura">Altura</label>
-                <input type="number" class="form-control" id="altura" placeholder="Digite sua Altura">
+                <input type="number" class="form-control" id="altura" placeholder="Ex.: 180">
 
                 <label for="form-label" for="peso">Peso</label>
-                <input type="number" class="form-control" id="peso" placeholder="Digite seu Peso">
+                <input type="number" class="form-control" id="peso" placeholder="Ex.: 78">
                 
-                <button class="btn btn-primary" onclick="calcularPlanos()">Calcular</button>
+                <button id="btn" class="btn btn-primary" onclick="calcularPlanos()">Calcular</button>
             </div>
             <div class="result-section">
-                <h2 class="valores">Valores</h2>
+                <h3 class="valores">Valores</h3>
                 <div id="tabelaResultado"></div>
             </div>
         </div>

@@ -31,28 +31,32 @@ function calcularPlanos() {
     
     const resultTable = document.getElementById('tabelaResultado');
     resultTable.innerHTML = `
-    <table>
-    <tr>
-    <th>Plano</th>
-    <th>Unimed</th>
-    <th>Hapvida</th>
-    </tr>
-    <tr>
-    <td>Básico</td>
-    <td>R$ ${unimed.basic.toFixed(2)}</td>
-    <td>R$ ${hapvida.basic.toFixed(2)}</td>
-    </tr>
-    <tr>
-    <td>Standard</td>
-    <td>R$ ${unimed.standard.toFixed(2)}</td>
-    <td>R$ ${hapvida.standard.toFixed(2)}</td>
-    </tr>
-    <tr>
-    <td>Premium</td>
-    <td>R$ ${unimed.premium.toFixed(2)}</td>
-    <td>R$ ${hapvida.premium.toFixed(2)}</td>
-    </tr>
-    </table>
+    <div class="tipos-planos">
+        <div class="basic">
+            <div class="title">Plano Básico</div>
+            <div class="description">
+                <p><b>Unimed:</b> R$ ${unimed.basic.toFixed(2)}</p>
+                <p><b>Hapvida:</b> R$ ${hapvida.basic.toFixed(2)}</p>
+                <button id="contratar" class="btn btn-danger">Contratar Plano</button>
+            </div>
+        </div>
+        <div class="standart">
+            <div class="title">Plano Standart</div>
+            <div class="description">
+                <p><b>Unimed:</b> R$ ${unimed.standard.toFixed(2)}</p>
+                <p><b>Hapvida:</b> R$ ${hapvida.standard.toFixed(2)}</p>
+                <button id="contratar" class="btn btn-danger">Contratar Plano</button>
+            </div>
+        </div>
+        <div class="premium">
+            <div class="title">Plano Premium</div>
+            <div class="description">
+                <p><b>Unimed:</b> R$ ${unimed.premium.toFixed(2)}</p>
+                <p><b>Hapvida:</b> R$ ${hapvida.premium.toFixed(2)}</p>
+                <button id="contratar" class="btn btn-danger">Contratar Plano</button>
+            </div>
+        </div>
+    </div>
     `;
     } else {
     alert('Insira valores válidos.');
